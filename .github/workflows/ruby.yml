@@ -4,9 +4,9 @@ name: CI Suite
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   lint:
@@ -39,6 +39,12 @@ jobs:
       with:
         bundler-cache: true
     - name: Setup database
-      run: bundle exec rails db:schema:load
+      run: bundle exec rails db:setup db:schema:load
+      env:
+        DATABASE_URL: postgres://postgres:postgres@127.0.0.1:5432/sample_blog_test
+        RAILS_ENV: test
     - name: Run test suite
       run: bundle exec rails test
+      env:
+        DATABASE_URL: postgres://postgres:postgres@127.0.0.1:5432/sample_blog_test
+        RAILS_ENV: test
