@@ -1,5 +1,7 @@
 # Sample Blog
 
+![CI](https://github.com/HarvestProfit/sample-blog/workflows/CI Suite/badge.svg)
+
 Incredibly simple api-only blog!
 
 This blog is super simple - it allows you to submit blog posts to the server, and can render them in an API.
