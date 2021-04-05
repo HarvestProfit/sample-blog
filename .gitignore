@@ -28,3 +28,7 @@
 
 # Ignore .vscode project file
 /.vscode/settings.json
+
+# Always ignore coverage directory
+/coverage/*
+.DS_Store
