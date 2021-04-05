@@ -19,6 +19,8 @@ gem "rack-cors"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "codecov"
+  gem "simplecov"
   gem "standard"
 end
 

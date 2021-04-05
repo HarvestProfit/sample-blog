@@ -1,6 +1,6 @@
 # Sample Blog
 
-![CI](https://github.com/HarvestProfit/sample-blog/workflows/CI Suite/badge.svg)
+![CI](https://github.com/HarvestProfit/sample-blog/workflows/CI%20Suite/badge.svg) [![codecov](https://codecov.io/gh/HarvestProfit/sample-blog/branch/main/graph/badge.svg?token=KSj36vyBgV)](https://codecov.io/gh/HarvestProfit/sample-blog)
 
 Incredibly simple api-only blog!
 
