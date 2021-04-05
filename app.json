@@ -1,0 +1,9 @@
+{
+  "name": "Simple Blog API",
+  "description": "A very incomplete blog using an API",
+  "repository": "https://github.com/HarvestProfit/simple-blog",
+  "logo": "https://www.harvestprofit.com/harvest-profit-farm-business-software.png",
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ]
+}
