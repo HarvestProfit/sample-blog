@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+user_one:
+  email: chris@harvestprofit.com
+  username: chris
+  password_digest: <%= BCrypt::Password.create('secret') %>
+
+user_two:
+  email: jaryd@harvestprofit.com
+  username: jaryd
+  password_digest: <%= BCrypt::Password.create('secret') %>

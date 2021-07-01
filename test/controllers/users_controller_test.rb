@@ -2,10 +2,7 @@ require "test_helper"
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @user = User.create(email: "test@harvestprofit.com",
-      username: "testaccount", 
-      password: "testpass",
-      password_confirmation: "testpass")
+    @user = users(:user_one)
   end
 
   test "should get index" do
@@ -17,7 +14,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_difference('User.count') do
       post users_url, params: { user: { email: 'testemail@harvestprofit.com', password: 'secret', password_confirmation: 'secret', username: 'testaccount3' } }, as: :json
     end
-    
+
     assert_response 201
   end
 
@@ -40,8 +37,8 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should login user" do
-    post '/login', params: {username: @user.username, password: @user.password}, as: :json
-    token = JSON.parse(response.body)["token"]  
+    post '/login', params: {username: @user.username, password: 'secret'}, as: :json
+    token = JSON.parse(response.body)["token"]
     payload = JsonWebToken.decode(token)
     user_id = payload.first["user_id"]
 
